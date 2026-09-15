@@ -1,0 +1,127 @@
+import React from 'react';
+
+export default function Footer() {
+  return (
+    <footer className="new-footer-ersti">
+      <div className="base-container w-container">
+        <div className="footer-top-wrap">
+          <div className="footer-con">
+            <div className="footer-info">
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '12px',
+                  marginBottom: '16px',
+                }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/jana-logo.jpg"
+                  loading="lazy"
+                  alt="Jana Affum logo"
+                  height={34}
+                  style={{ borderRadius: '4px', border: '1px solid rgba(211,175,101,0.3)' }}
+                />
+                <span
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    fontWeight: 700,
+                    fontSize: '22px',
+                    color: '#FFFFFF',
+                    letterSpacing: '0.02em',
+                  }}
+                >
+                  Jana Affum
+                </span>
+              </div>
+              <p
+                style={{
+                  fontSize: 'var(--t-body)',
+                  lineHeight: 'var(--lh-body)',
+                  color: 'rgba(255,255,255,0.75)',
+                  maxWidth: 'var(--measure)',
+                  marginBottom: '24px',
+                }}
+              >
+                Executive and career coaching for professionals at a crossroads. Ten years of
+                international hiring intelligence to evaluate your real market value.
+              </p>
+              <div className="links-socials">
+                <div className="links-container">
+                  <a href="/" className="footer-project-link">
+                    Home
+                  </a>
+                  <a href="/recruitment" className="footer-project-link">
+                    Recruitment
+                  </a>
+                  <a href="/coaching" className="footer-project-link">
+                    Coaching
+                  </a>
+                  <a href="#proof" className="footer-project-link">
+                    Results
+                  </a>
+                  <a href="#booking" className="footer-project-link">
+                    Contact
+                  </a>
+                </div>
+                <div
+                  className="social-networks"
+                  style={{ display: 'flex', gap: '16px', alignItems: 'center' }}
+                >
+                  <a
+                    href="https://www.linkedin.com/in/jana-affum-0aa979197"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="footer-socials"
+                    style={{
+                      fontSize: 'var(--t-meta)',
+                      fontWeight: 700,
+                      letterSpacing: '0.04em',
+                    }}
+                  >
+                    LinkedIn
+                  </a>
+                  <a
+                    href="https://www.instagram.com/janaaffum/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="footer-socials"
+                    style={{
+                      fontSize: 'var(--t-meta)',
+                      fontWeight: 700,
+                      letterSpacing: '0.04em',
+                    }}
+                  >
+                    Instagram
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          className="footer-bottom"
+          style={{
+            borderTop: '1px solid rgba(255,255,255,0.12)',
+            paddingTop: '28px',
+            fontSize: 'var(--t-meta)',
+            lineHeight: 'var(--lh-meta)',
+            color: 'var(--white-50)',
+            display: 'flex',
+            justifyContent: 'space-between',
+            flexWrap: 'wrap',
+            gap: '16px',
+          }}
+        >
+          <div className="footer-copyright-5">
+            Jana Affum &bull; Business ID: 13956248 &bull; VAT ID: CZ8952264651 &bull; Registered
+            office: tř. Dukelských hrdinů 3789/84, 695 01 Hodonín, Czech Republic
+          </div>
+          <div>&copy; 2026 Jana Affum. All rights reserved.</div>
+        </div>
+      </div>
+    </footer>
+  );
+}
