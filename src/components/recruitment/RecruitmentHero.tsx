@@ -5,15 +5,6 @@ export default function RecruitmentHero() {
   return (
     <div id="recruitment-hero" className="banner-1" style={{ minHeight: 'auto', paddingBottom: '40px' }}>
       <div className="top-banner-cover">
-        <div className="right-circle"></div>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          className="right-img"
-          src="/images/jana-recruitment-search.jpg"
-          alt="Jana Affum - International Executive Search"
-          loading="eager"
-          style={{ objectFit: 'cover', objectPosition: 'center top' }}
-        />
         <div className="base-container">
           <div className="flex-content">
             <div className="left-content">
@@ -79,6 +70,18 @@ export default function RecruitmentHero() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="hero-portrait-wrap">
+          <div className="right-circle"></div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            className="right-img"
+            src="/images/jana-recruitment-search.jpg"
+            alt="Jana Affum - International Executive Search"
+            loading="eager"
+            style={{ objectFit: 'cover', objectPosition: 'center top' }}
+          />
         </div>
       </div>
 

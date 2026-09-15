@@ -20173,12 +20173,64 @@ h1, h2, h3, h4, h5, h6,
 
 
 /* ==========================================================================
-   LARGER HERO PORTRAIT & REFINED POSITIONING
+   HERO PORTRAIT & REFINED POSITIONING (DESKTOP & MOBILE)
    ========================================================================== */
 .top-banner-cover {
   min-height: 620px !important;
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  overflow: hidden !important;
 }
 
+.hero-portrait-wrap {
+  position: absolute !important;
+  right: 80px !important;
+  bottom: 0 !important;
+  height: 100% !important;
+  max-height: 640px !important;
+  width: 480px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: flex-end !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+
+.hero-portrait-wrap .right-circle {
+  position: absolute !important;
+  left: 50% !important;
+  bottom: -40px !important;
+  right: auto !important;
+  top: auto !important;
+  transform: translateX(-50%) !important;
+  width: 420px !important;
+  height: 420px !important;
+  border-radius: 100% !important;
+  background: linear-gradient(135deg, #ECCB85 0%, #D3AF65 60%, #BA9243 100%) !important;
+  box-shadow: 0 15px 45px rgba(211, 175, 101, 0.35) !important;
+  z-index: 1 !important;
+  display: block !important;
+}
+
+.hero-portrait-wrap .right-img {
+  position: relative !important;
+  height: 100% !important;
+  max-height: 640px !important;
+  width: auto !important;
+  max-width: 100% !important;
+  object-fit: contain !important;
+  object-position: bottom center !important;
+  inset: auto !important;
+  right: auto !important;
+  bottom: 0 !important;
+  margin: 0 auto !important;
+  z-index: 2 !important;
+  filter: drop-shadow(0 18px 40px rgba(36, 30, 20, 0.12)) !important;
+  display: block !important;
+}
+
+/* Fallbacks for standalone right-img & right-circle outside wrap */
 .right-img {
   position: absolute !important;
   right: 80px !important;
@@ -20197,11 +20249,25 @@ h1, h2, h3, h4, h5, h6,
   height: 420px !important;
   right: 90px !important;
   bottom: -40px !important;
+  display: block !important;
 }
 
 @media (min-width: 1280px) {
   .top-banner-cover {
     min-height: 660px !important;
+  }
+  .hero-portrait-wrap {
+    right: 120px !important;
+    max-height: 680px !important;
+    width: 520px !important;
+  }
+  .hero-portrait-wrap .right-circle {
+    width: 460px !important;
+    height: 460px !important;
+    bottom: -50px !important;
+  }
+  .hero-portrait-wrap .right-img {
+    max-height: 680px !important;
   }
   .right-img {
     right: 120px !important;
@@ -20219,6 +20285,19 @@ h1, h2, h3, h4, h5, h6,
   .top-banner-cover {
     min-height: 700px !important;
   }
+  .hero-portrait-wrap {
+    right: 160px !important;
+    max-height: 730px !important;
+    width: 560px !important;
+  }
+  .hero-portrait-wrap .right-circle {
+    width: 500px !important;
+    height: 500px !important;
+    bottom: -60px !important;
+  }
+  .hero-portrait-wrap .right-img {
+    max-height: 730px !important;
+  }
   .right-img {
     right: 160px !important;
     max-height: 730px !important;
@@ -20231,7 +20310,20 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1199px) and (min-width: 992px) {
+  .hero-portrait-wrap {
+    right: 20px !important;
+    max-height: 540px !important;
+    width: 420px !important;
+  }
+  .hero-portrait-wrap .right-circle {
+    width: 360px !important;
+    height: 360px !important;
+    bottom: -30px !important;
+  }
+  .hero-portrait-wrap .right-img {
+    max-height: 540px !important;
+  }
   .right-img {
     right: 20px !important;
     max-height: 540px !important;
@@ -20244,18 +20336,198 @@ h1, h2, h3, h4, h5, h6,
 }
 
 @media (max-width: 991px) {
-  .right-img {
-    height: 480px !important;
-    right: 0 !important;
+  .top-banner-cover {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 48px 24px 0 24px !important;
+    min-height: auto !important;
+    overflow: hidden !important;
   }
-}
 
-@media (max-width: 767px) {
+  .left-content {
+    max-width: 100% !important;
+    margin-bottom: 0 !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .banner-1-title {
+    font-size: 34px !important;
+    text-align: center !important;
+  }
+
+  .new-banner-text {
+    width: 100% !important;
+    max-width: 620px !important;
+    margin: 0 auto 16px auto !important;
+    text-align: center !important;
+  }
+
+  .button-con {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 20px !important;
+    margin-top: 24px !important;
+    margin-bottom: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Right under CTA buttons centered elegantly */
+  .hero-portrait-wrap {
+    position: relative !important;
+    inset: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    max-width: 440px !important;
+    height: 400px !important;
+    margin: 32px auto 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-end !important;
+    overflow: visible !important;
+    pointer-events: auto !important;
+    z-index: 1 !important;
+  }
+
+  .hero-portrait-wrap .right-circle {
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    bottom: auto !important;
+    right: auto !important;
+    transform: translate(-50%, -42%) !important;
+    width: 280px !important;
+    height: 280px !important;
+    border-radius: 100% !important;
+    background: linear-gradient(135deg, #ECCB85 0%, #D3AF65 60%, #BA9243 100%) !important;
+    box-shadow: 0 12px 36px rgba(211, 175, 101, 0.32) !important;
+    z-index: 1 !important;
+    display: block !important;
+  }
+
+  .hero-portrait-wrap .right-img {
+    position: relative !important;
+    height: 100% !important;
+    max-height: 400px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+    object-position: bottom center !important;
+    inset: auto !important;
+    margin: 0 auto !important;
+    display: block !important;
+    z-index: 2 !important;
+    filter: drop-shadow(0 14px 32px rgba(36, 30, 20, 0.12)) !important;
+  }
+
   .right-img {
     position: relative !important;
     height: 380px !important;
     right: auto !important;
-    margin: 0 auto !important;
+    margin: 24px auto 0 auto !important;
+    display: block !important;
+  }
+
+  .right-circle {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .top-banner-cover {
+    padding: 38px 18px 0 18px !important;
+    border-radius: 28px !important;
+    margin-top: 75px !important;
+  }
+
+  .banner-1-title {
+    font-size: 28px !important;
+    line-height: 1.22 !important;
+    margin-bottom: 14px !important;
+  }
+
+  .banner-par-wrap {
+    margin-top: 14px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .button-con {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 14px !important;
+    margin-top: 18px !important;
+    width: 100% !important;
+  }
+
+  .button-con .no-srink-btn {
+    width: 100% !important;
+    max-width: 320px !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .button-con .primary-button {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  .button-con .link-wrap {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .hero-portrait-wrap {
+    height: 350px !important;
+    max-width: 320px !important;
+    margin-top: 26px !important;
+  }
+
+  .hero-portrait-wrap .right-circle {
+    width: 240px !important;
+    height: 240px !important;
+    transform: translate(-50%, -40%) !important;
+    display: block !important;
+  }
+
+  .hero-portrait-wrap .right-img {
+    max-height: 350px !important;
+  }
+}
+
+@media (max-width: 479px) {
+  .top-banner-cover {
+    padding: 30px 14px 0 14px !important;
+    border-radius: 24px !important;
+  }
+
+  .banner-1-title {
+    font-size: 25px !important;
+  }
+
+  .hero-portrait-wrap {
+    height: 310px !important;
+    max-width: 280px !important;
+    margin-top: 20px !important;
+  }
+
+  .hero-portrait-wrap .right-circle {
+    width: 210px !important;
+    height: 210px !important;
+    transform: translate(-50%, -38%) !important;
+    display: block !important;
+  }
+
+  .hero-portrait-wrap .right-img {
+    max-height: 310px !important;
   }
 }
 

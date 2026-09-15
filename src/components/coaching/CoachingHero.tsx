@@ -4,15 +4,6 @@ export default function CoachingHero() {
   return (
     <div id="coaching-hero" className="banner-1" style={{ minHeight: 'auto', paddingBottom: '40px' }}>
       <div className="top-banner-cover">
-        <div className="right-circle"></div>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          className="right-img"
-          src="/images/jana-fit.png"
-          alt="Jana Affum - Private Coach & Thinking Partner"
-          loading="eager"
-          style={{ objectFit: 'contain', objectPosition: 'center bottom' }}
-        />
         <div className="base-container">
           <div className="flex-content">
             <div className="left-content">
@@ -78,6 +69,18 @@ export default function CoachingHero() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="hero-portrait-wrap">
+          <div className="right-circle"></div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            className="right-img"
+            src="/images/jana-fit.png"
+            alt="Jana Affum - Private Coach & Thinking Partner"
+            loading="eager"
+            style={{ objectFit: 'contain', objectPosition: 'center bottom' }}
+          />
         </div>
       </div>
 

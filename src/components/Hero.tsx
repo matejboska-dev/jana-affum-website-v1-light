@@ -6,14 +6,6 @@ export default function Hero() {
   return (
     <div id="hero" className="banner-1">
       <div className="top-banner-cover">
-        <div className="right-circle"></div>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          className="right-img"
-          src="/images/jana-affum-hero.png"
-          alt="Jana Affum - International Recruiter & Career Coach"
-          loading="eager"
-        />
         <div className="base-container">
           <div className="flex-content">
             <div className="left-content">
@@ -67,6 +59,17 @@ export default function Hero() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="hero-portrait-wrap">
+          <div className="right-circle"></div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            className="right-img"
+            src="/images/jana-affum-hero.png"
+            alt="Jana Affum - International Recruiter & Career Coach"
+            loading="eager"
+          />
         </div>
       </div>
 
